@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+/* VARIABLES */
+
+:root {
+  /* Color values */
+  --color-background: rgba(200, 200, 200, 1);
+  --color-block: rgba(255, 255, 255, 1);
+  --color-text: rgba(0, 0, 0, 1);
+  --color-text-link: rgba(0, 0, 255, 0.8);
+  --color-text-link-hover: rgba(0, 0, 255, 0.4);
+  /* Font values */
+  --font-family: "Helvetica", "Arial", sans-serif;
+  --font-size: 24px;
+  /* Margin value */
+  --margin: 1rem;
+}
+
+/* GENERAL STYLES */
+
+html {
+  font: var(--font-size) var(--font-family);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+body {
+  position: relative;
+  background-color: var(--color-background);
+  font: var(--font-size) var(--font-family);
+  color: var(--color-text);
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
+}
+
+/* PAGE STYLES */
+
+/* page structure */
+
+div.page-wrapper {
+  /* the element that 'wraps' everything */
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  height: auto;
+  padding: var(--margin);
+  background-color: darkgray;
+  box-sizing: border-box;
+}
+
+/* Do your work here... */
+
+main.layout-container {
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.layout-block {
+  width: 25%;
+  position: relative;
+  display: block;
+  float: left;
+  clear: right;
+  background-color: coral;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.layout-block p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: orangered;
+}
+
+/* color scheme blocks */
+
+.layout-block:nth-of-type(1) {
+  opacity: 1;
+  width: calc(100% - 15rem);
+}
+
+.layout-block:nth-of-type(2) {
+  width: 15rem;
+  opacity: 0.8;
+}
+
+.layout-block:nth-of-type(3) {
+  width: 25%;
+  height: 100px;
+  opacity: 0.6;
+}
+
+.layout-block:nth-of-type(4) {
+  width: 25%;
+  height: 100px;
+  opacity: 0.5;
+}
+
+.layout-block:nth-of-type(5) {
+  width: 25%;
+  height: 100px;
+  opacity: 0.4;
+}
+
+.layout-block:nth-of-type(6) {
+  width: 25%;
+  height: 100px;
+  opacity: 1;
+}
+
+.layout-block:nth-of-type(7) {
+  width: 25%;
+  height: 100px;
+  opacity: 0.8;
+}
+
+.layout-block:nth-of-type(8) {
+  width: 25%;
+  height: 100px;
+  opacity: 0.6;
+}
+
+.layout-block:nth-of-type(9) {
+  width: 25%;
+  height: 100px;
+  opacity: 0.5;
+}
+
+.layout-block:nth-of-type(10) {
+  width: 25%;
+  height: 100px;
+  opacity: 0.4;
+}
+
+.layout-block:nth-of-type(11) {
+  width: 25%;
+  height: 100px;
+  opacity: 1;
+}
+
+.layout-block:nth-of-type(12) {
+  width: 25%;
+  height: 100px;
+  opacity: 0.8;
+}
+
+/* UTILITY CLASSES */
+
+/* hide desktop mobile etc */
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* WEBSITE MEDIA QUERIES */
+
+/* styles for 'mobile', screen sizes up to 779px, should covers 'mobile' and 'tablet' */
+/* style this one first and then use the subsequent ones in a cascading way (from general to specific) */
+
+@media (max-width: 779px) {
+  /* your 'mobile' overriding css properties here */
+
+  /* utility classes, mobile */
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
