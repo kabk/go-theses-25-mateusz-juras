@@ -455,8 +455,8 @@ a.footnote {
   text-align: center;
   margin: 1rem 0;
   color: #ccc; /* adjust if needed based on your background */
-  margin-bottom: 40rem;
-  margin-top: 40rem;
+  margin-bottom: 25rem;
+  margin-top: 25rem;
   opacity: 0.5;
 }
 

@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
               }
 
               footnoteTimers.delete(el);
-            }, 3000); // 3-second delay
+            }, 5000); // 3-second delay
             footnoteTimers.set(el, timer);
           }
         } else {
