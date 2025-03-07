@@ -1,17 +1,39 @@
 @charset "UTF-8";
 
+/* @FONT FACE (enable the use of 'custom fonts' inside your document) */
+
+/* 
+  You can use 'fontsquirrel' (https://www.fontsquirrel.com) 
+  or 'transfonter' (https://transfonter.org)
+  to generate your own font for the web from .ttf or .oft files 
+*/
+
+@font-face {
+  font-family: "Your Font Name";
+  src: url("../fonts/yourfontname/yourfontname-roman.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Your Font Name";
+  src: url("../fonts/yourfontname/yourfontname-italic.woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+}
+
 /* VARIABLES */
 
 :root {
   /* Color values */
-  --color-background: rgba(200, 200, 200, 1);
-  --color-block: rgba(255, 255, 255, 1);
-  --color-text: rgba(0, 0, 0, 1);
-  --color-text-link: rgba(0, 0, 255, 0.8);
-  --color-text-link-hover: rgba(0, 0, 255, 0.4);
+  --color-text: rgb(255, 255, 255);
+  --color-text-link: rgb(255, 255, 255); /* Lighter shade of blue */
+  --color-text-link-hover: #0004ff; /* Lighter hover color */
   /* Font values */
-  --font-family: "Helvetica", "Arial", sans-serif;
-  --font-size: 24px;
+  --font-text: "Arial", sans-serif; /* Changed to Arial */
+  --font-size: 6px;
   /* Margin value */
   --margin: 1rem;
 }
@@ -19,138 +41,118 @@
 /* GENERAL STYLES */
 
 html {
-  font: var(--font-size) var(--font-family);
+  font: var(--font-size) var(--font-text);
   color: var(--color-text);
   background-color: var(--color-background);
+  scroll-behavior: smooth;
 }
 
 body {
   position: relative;
-  background-color: var(--color-background);
-  font: var(--font-size) var(--font-family);
+  /* background: #232323; Dark background */
+  font: var(--font-size) var(--font-text); /* Changed to Arial */
   color: var(--color-text);
   width: 100%;
   height: auto;
   overflow-y: auto;
+  background: linear-gradient(to bottom, #0004ff, #000);
+  background-attachment: fixed;
+}
+
+a {
+  color: var(--color-text-link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-text-link-hover);
+  text-decoration: none;
+}
+
+h1 {
+  /* h1 style */
+  text-align: center;
+  margin-bottom: 40rem;
+  margin-top: 5rem;
+}
+
+h2 {
+  /* h2 style */
+  text-align: left;
+  margin-top: 25rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  /* h3 style */
+  text-align: left;
+  margin-top: 25rem;
+  margin-bottom: 2rem;
+}
+
+h4,
+h5,
+h6 {
+  /* h4-h5-h6 style */
+  text-align: left;
+}
+
+p {
+  /* paragraph style */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+ol,
+ul {
+  /* ordered list and unordered list styles */
+}
+
+blockquote {
+  /* blockquote element style */
+}
+
+hr {
+  /* horizontal rule style */
 }
 
 /* PAGE STYLES */
 
 /* page structure */
 
-div.page-wrapper {
-  /* the element that 'wraps' everything */
-  position: relative;
-  display: block;
-  float: left;
-  width: 100%;
-  height: auto;
+.page-wrapper {
+  max-width: 800px; /* Adjust this value to narrow or widen the column */
+  margin: 0 auto; /* Centers the container */
   padding: var(--margin);
-  background-color: darkgray;
-  box-sizing: border-box;
 }
 
-/* Do your work here... */
+/* navigation */
 
-main.layout-container {
-  position: relative;
-  display: block;
-  float: left;
-  width: 100%;
-  height: auto;
-  background-color: black;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-.layout-block {
-  width: 25%;
-  position: relative;
-  display: block;
-  float: left;
-  clear: right;
-  background-color: coral;
-  margin: 0rem;
-  padding: 0rem;
-}
-
-.layout-block p {
-  text-align: center;
-  margin: 0;
+header nav ul {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  list-style: none;
+  margin: 1rem auto 0; /* Center the container with auto horizontal margins */
   padding: 0;
-  background-color: orangered;
+  gap: 0.1rem; /* Space between each item */
 }
 
-/* color scheme blocks */
-
-.layout-block:nth-of-type(1) {
-  opacity: 1;
-  width: calc(100% - 15rem);
+header nav ul li {
+  background-color: #ccc; /* Light gray background */
+  padding: 0.5rem 1rem; /* Adjust for a box-like appearance */
+  border-radius: 0.5px; /* Optional: rounds the corners */
+  width: auto; /* You can set a fixed width if needed */
+  text-align: center;
 }
 
-.layout-block:nth-of-type(2) {
-  width: 15rem;
-  opacity: 0.8;
+/* content */
+
+main {
 }
 
-.layout-block:nth-of-type(3) {
-  width: 25%;
-  height: 100px;
-  opacity: 0.6;
-}
-
-.layout-block:nth-of-type(4) {
-  width: 25%;
-  height: 100px;
-  opacity: 0.5;
-}
-
-.layout-block:nth-of-type(5) {
-  width: 25%;
-  height: 100px;
-  opacity: 0.4;
-}
-
-.layout-block:nth-of-type(6) {
-  width: 25%;
-  height: 100px;
-  opacity: 1;
-}
-
-.layout-block:nth-of-type(7) {
-  width: 25%;
-  height: 100px;
-  opacity: 0.8;
-}
-
-.layout-block:nth-of-type(8) {
-  width: 25%;
-  height: 100px;
-  opacity: 0.6;
-}
-
-.layout-block:nth-of-type(9) {
-  width: 25%;
-  height: 100px;
-  opacity: 0.5;
-}
-
-.layout-block:nth-of-type(10) {
-  width: 25%;
-  height: 100px;
-  opacity: 0.4;
-}
-
-.layout-block:nth-of-type(11) {
-  width: 25%;
-  height: 100px;
-  opacity: 1;
-}
-
-.layout-block:nth-of-type(12) {
-  width: 25%;
-  height: 100px;
-  opacity: 0.8;
+summary {
 }
 
 /* UTILITY CLASSES */
@@ -167,11 +169,90 @@ main.layout-container {
 
 /* WEBSITE MEDIA QUERIES */
 
+/* responsive typeface for various breaking points, sets the default 'rem' value */
+@media (max-width: 299px) {
+  :root {
+    --font-size: 18px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-text);
+  }
+}
+@media (min-width: 299px) and (max-width: 340px) {
+  :root {
+    --font-size: 19px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-text);
+  }
+}
+@media (min-width: 340px) and (max-width: 440px) {
+  :root {
+    --font-size: 20px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-text);
+  }
+}
+@media (min-width: 441px) and (max-width: 779px) {
+  :root {
+    --font-size: 19px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-text);
+  }
+}
+@media (min-width: 780px) and (max-width: 992px) {
+  :root {
+    --font-size: 20px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-text);
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  :root {
+    --font-size: 21px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-text);
+  }
+}
+@media (min-width: 1201px) and (max-width: 1320px) {
+  :root {
+    --font-size: 22px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-text);
+  }
+}
+@media (min-width: 1321px) {
+  :root {
+    --font-size: 24px;
+  }
+  html,
+  body {
+    font: var(--font-size) var(--font-text);
+  }
+}
+
 /* styles for 'mobile', screen sizes up to 779px, should covers 'mobile' and 'tablet' */
 /* style this one first and then use the subsequent ones in a cascading way (from general to specific) */
 
 @media (max-width: 779px) {
   /* your 'mobile' overriding css properties here */
+
+  div.page-wrapper {
+    /* the element that 'wraps' everything */
+    padding: var(--margin);
+  }
 
   /* utility classes, mobile */
 
@@ -182,4 +263,214 @@ main.layout-container {
   .mobile-only {
     display: block;
   }
+}
+
+/* use this query to apply style changes to smaller smartphones sizes (like an iPhone 5S or SE 2016), max size of 339px */
+
+@media (max-width: 400px) {
+  #sticky-nav ul li a {
+    font-size: 18px;
+  }
+  /* your overriding css properties here */
+}
+
+/* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
+
+@media (max-width: 779px) and (orientation: landscape) {
+  /* your overriding css properties here */
+}
+
+/* use this query to apply style for 'small' desktop screens */
+
+@media (min-width: 780px) and (max-width: 992px) {
+  /* your overriding css properties here */
+}
+
+/* Background fade - only applied to the body */
+@keyframes fade-background {
+  0% {
+    background: rgb(0, 0, 0); /* Initial black background */
+  }
+  100% {
+    background: #0004ff; /* Change to your desired background color */
+  }
+}
+
+/* Apply the background fade to the body */
+body {
+  background: black; /* Initial "lights off" background */
+  animation: fade-background 2s ease-in-out forwards; /* Animate the background fade */
+  transition: background 2s ease-in-out; /* Smooth background transition */
+}
+
+.indent {
+  padding-left: 50px;
+  font-style: italic;
+}
+
+.indented {
+  text-indent: 50px;
+}
+
+.center-image {
+  display: block; /* Ensure image is treated as a block for margin auto */
+  margin: 0 auto; /* Horizontally centers the image */
+  text-align: center; /* Centers inline content inside block if needed */
+  max-width: 100%; /* Ensure responsiveness */
+  padding: 40px 0;
+}
+
+/* Sticky nav container positioned at the bottom */
+#sticky-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ccc;
+  height: 50px;
+  line-height: 50px;
+  z-index: 1000;
+  transform: translateY(100%); /* Initially hidden below the viewport */
+  transition: transform 0.3s ease;
+}
+
+/* Style the nav list */
+#sticky-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Style the nav links */
+#sticky-nav ul li a {
+  color: var(--color-text-link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: clamp(16px, 3vw, 24px);
+  /* Optionally adjust letter-spacing for better readability */
+  letter-spacing: 0.5px;
+}
+
+#sticky-nav ul li a:hover {
+  color: #0004ff;
+}
+.glitch {
+  display: inline-block;
+}
+
+.dud {
+  opacity: 0.5;
+}
+
+/* #bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  pointer-events: none;
+  z-index: -1; /* Place behind content */
+
+@keyframes blink {
+  0% {
+    opacity: 0.8;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Optional: If you want all images to be initially hidden */
+img.blink-effect {
+  opacity: 0.8;
+}
+
+#noise-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allow interactions to pass through */
+  z-index: 9999; /* Place on top of all other elements */
+  opacity: 0.1; /* Adjust opacity for subtlety */
+}
+
+.footnote-popup {
+  display: block; /* It will be created and appended dynamically */
+  /* Other styles are set inline in JS; you can also move them here if preferred */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  background: #fff; /* A bright white background */
+}
+
+/* #footnote-popup {
+  display: block !important;
+  z-index: 10000 !important;
+} */
+
+/* Footnote content styling */
+.footnote-popup .footnote-content {
+  font-size: 0.8rem; /* Smaller text for the footnote */
+  max-height: 150px;
+  overflow: auto;
+}
+
+/* Style the close button */
+.footnote-popup .close-footnote {
+  display: block;
+  margin: 1rem auto 0;
+  cursor: pointer;
+  background: #ccc;
+  border: 1px solid #000;
+  font-family: inherit;
+}
+
+/* Optionally, style the footnote link to look distinct */
+a.footnote {
+  color: var(--color-text-link);
+  text-decoration: underline;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10001; /* Ensure it's above any moving elements */
+}
+
+/* Style for the advice sentence */
+.refresh-advice {
+  font-size: 1rem;
+  text-align: center;
+  margin: 1rem 0;
+  color: #ccc; /* adjust if needed based on your background */
+  margin-bottom: 40rem;
+  margin-top: 40rem;
+  opacity: 0.5;
+}
+
+/* Sticky Refresh Button in Bottom Right Corner */
+#refresh-button {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 10000;
+  background: #dfdfdf;
+  border: 1px solid #000;
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
 }

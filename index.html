@@ -1,119 +1,736 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-	<head>
+    <!-- meta tags, fill them with website meta infos -->
+    <meta name="description" content="Bachelor thesis, Mateusz Juras" />
+    <meta
+      name="keywords"
+      content="performativity, identity, art, graphic design, actor"
+    />
+    <meta name="author" content="Mateusz Juras" />
 
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- favicon, fill with a 512x512px .png image named 'favicon.png' -->
+    <link rel="icon" href="assets/images/favicon/favicon.png" type="image/png">
 
-		<!-- website title, visible in the browser window and on link sharing -->
-		<title>CSS layout exercise</title>
+    <!-- website title, visible in the browser window and on link sharing -->
+    <title>Layered Reality and The Significance of a Role</title>
 
-		<!-- links for extensions and dependencies -->
+    <!-- links for extensions and dependencies -->
 
-		<!-- css -->
-		<!-- first link your CSS dependences, here is normalize, a CSS 'reset' for cross-browser appearence uniformity -->
-		<link rel="stylesheet" href="assets/css/normalize.css">
-		<!-- you stylesheet -->
-		<link rel="stylesheet" href="assets/css/style.css?ver=1.0">
-	    
-	</head>
+    <!-- css -->
+    <!-- first link your CSS dependences, here is normalize, a CSS 'reset' for cross-browser appearence uniformity -->
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <!-- you stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css?ver=1.0" />
 
-	<body>
+    <!-- js -->
+    <!-- first link your javascript dependencies -->
 
-		<!-- webpage content goes here -->
+    <!-- then your function scripts -->
+    <script type="text/javascript" src="assets/js/script.js?ver=1.0"></script>
+    
+  </head>
 
-		<div class="page-wrapper">
+  <body>
+    <!-- webpage content goes here -->
+    <canvas id="noise-canvas"></canvas>
 
-			<main class="layout-container">
-
-				<div class="layout-block layout-block-1">
-
-					<p>Block 1</p>
-
-				</div>
-
-
-				<div class="layout-block layout-block-2">
-
-					<p>Block 2</p>
-
-				</div>
-
-
-				<div class="layout-block layout-block-3">
-
-					<p>Block 3</p>
-
-				</div>
-
-				<div class="layout-block layout-block-4">
-
-					<p>Block 4</p>
-
-				</div>
-
-
-				<div class="layout-block layout-block-5">
-
-					<p>Block 5</p>
-
-				</div>
+    <div id="bg-overlay"></div>
+  
+    <nav id="sticky-nav">
+      <ul>
+        <li><a href="#glitch-title" class="glitch">⬆</a></li>
+        <li><a href="#abstract" class="glitch">Abstract</a></li>
+        <li><a href="#prologue" class="glitch">Prologue</a></li>
+        <li><a href="#chapter-1" class="glitch">①</a></li>
+        <li><a href="#chapter-2" class="glitch">②</a></li>
+        <li><a href="#chapter-3" class="glitch">③</a></li>
+        <li><a href="#chapter-4" class="glitch">④</a></li>
+        <li><a href="#epilogue" class="glitch">Epilogue</a></li>
+      </ul>
+    </nav>
 
 
-				<div class="layout-block layout-block-6">
-
-					<p>Block 6</p>
-					
-				</div>
-
-				<div class="layout-block layout-block-7">
-
-					<p>Block 7</p>
-
-				</div>
+    
 
 
-				<div class="layout-block layout-block-8">
+    <div class="page-wrapper">
+      <header>
+        <h1 id="glitch-title">Layered Reality and The Significance of a Role</h1>
+        
+        <p class="refresh-advice">
+          Website not loading correctly? Did you try to reload it already?
+        </p>
 
-					<p>Block 8</p>
+        <nav>
+          <ul>
+            <li><a href="#abstract">Abstract</a></li>
+            <br>
+            <li><a href="#prologue">Prologue</a></li>
+            <br>
+            <li>
+              <a href="#chapter-1">Art and life (the human need to imitate)</a>
+             
+            </li>
+            <br>
+            <li>
+              <a href="#chapter-2">Art and the artist</a>
+              
+            </li>
+            <br>
+            <li>
+              <a href="#chapter-3">Performance of self and reality TV</a>
+              
+            </li>
+            <br>
+            <li>
+              <a href="#chapter-4">Graphic design as an actor</a>
+              
+            </li>
+            <br>
+            <li>
+              <a href="#epilogue">Epilogue</a>
+            </li>
+            <br>
+            <li>
+              <a href="#bibliography">Bibliography</a>
+            </li>
+            <!-- <li><a href="#epilogue">Epilogue</a></li> -->
+          </ul>
+        </nav>
+      </header>
 
-				</div>
+      <main>
+        
+        
+        <h2 class="glitch-on-scroll" id="abstract">Abstract</h2>
+
+        <p class="glitch-on-scroll" >
+          By looking for connections between theatre studies, performance art,
+          performativity of social interactions, and film, I wish to explore the
+          significance of a role and narrative. I wish to analyse the relation
+          between identity and one’s art practice. Can we extend the concept of
+          a role to graphic design, treating it as an actor, acting out a
+          narrative? </p>
+          <p>
+            <a href="javascript:void(0)" class="footnote" data-footnote="[1]John Gillies, “Globe/Theatrum Mundi,” Cambridge University Press EBooks, August 17, 2019, 60–66. https://doi.org/10.1017/9781316137062.009."></a>
+          </p>
+          <p class="glitch-on-scroll" >
+            “Theatrum mundi”
+            [1]
+            
+             is a concept that describes life as a
+          performance and the world as a stage. This allows us to translate life
+          into stories, our surroundings into a set and objects into props. Are
+          we all just actors playing our part in a strange reality TV programme?
+          Who is the director, and where is the audience? Can we exist without
+          these boxes? And if you fake it, can you actually make it? As a
+          designer I find it highly fascinating, how design affects the
+          perception of reality, and if we can even define it? Assuming identity
+          is a social construct, I want to research how fiction and speculation
+          can make us see beyond limiting constraints of the physical world.
+        </p>
+      
+        <h2 class="glitch-on-scroll" id="prologue">Prologue</h2>
+        <p>
+          <a href="javascript:void(0)" class="footnote" data-footnote="[2]Two or Three Things I Know about Her (UGC, 1967)."></a>
+        </p>
+        <p class="glitch-on-scroll" >
+          On December 10th, 2024, I attended a lecture organized by the
+          graduating students of the Graphic Design Department of the Gerrit
+          Rietveld Academy taking place at the Goethe-Institut in Amsterdam. The
+          lecture was given by Linda Van Deursen, a prominent Dutch graphic
+          designer, and was about the relationship between film and her work.
+          She talked about working with images, particularly in the context of a
+          book she made with Robby Müller, a cinematographer, known for
+          collaborations with directors like Wim Wenders and his distinctive way
+          of capturing light. At some point she mentioned Jean-Luc Godard’s film
+          Two or Three Things I Know About Her[2], going over a scene where we
+          get to discover a certain place, an apartment. On the walls,
+          throughout the whole place, there is a series of travel posters
+          hanging. It looks exactly like a travel agency would look like. In the
+          next scenes, we find out that the apartment is actually a brothel,
+          only disguised as a travel agency. Thinking about it later, I realised
+          something, it wasn’t even a brothel… Only a movie set depicting one.
+          It made me think of how the world we see on screens provides us with
+          illusions and how much it shapes our perception. Thinking of actors
+          performing, but also sets and props, I began to wonder, what can we
+          actually trust? Are our daily interactions shaped by “stage
+          directions” imposed by our environments, and their relation to one’s
+          identity? Are our actions performative? How does this relate to art
+          and design practices? Can we look at graphic design as a tool of
+          deception, providing a stylized layer onto certain information? Can
+          that layer be considered a role, and the designer a director? I wish
+          to explore how identity influences artistic practice, and how
+          speculation and fiction can lead to exciting results. So far, I have
+          asked a lot of questions here; in the further parts of this thesis, I
+          will go on a quest trying to transform them into before-mentioned
+          excitement.
+        </p>
+
+        <p class="glitch-on-scroll">
+          But before I do that, there are some things that need to be addressed.
+          First, I define the term of a role as a specified purpose and position
+          within a certain context, and the narrative as a story, shaped by a
+          particular perspective, including a fictional one. Therefore, this
+          thesis is far from being an objective text, as it is coming from my
+          own personal perspective, and the sources given here of artists,
+          books, and lectures are examples I found inspiring in relation to my
+          own practice and studies at the graphic design department at the KABK
+          for the past four years. In short, I am speaking from a position of
+          privilege. In this text, I am taking on a role of a student writing a
+          thesis, and this thesis is my narrative. Please keep that in mind.
+        </p>
+
+        <!-- <details>
+
+					<summary>
+						<h3 id="intro">Sub-content, example of an accordion</h2>
+					</summary>
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque metus nulla, rutrum eget malesuada sit amet, gravida in nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ligula felis, consectetur ut mi eu, egestas interdum augue. Aliquam a ipsum lectus. Pellentesque a vulputate ligula, id malesuada quam. Cras eleifend in leo vitae pellentesque. Duis ac vehicula sem, ut blandit leo. Mauris vulputate dapibus velit tincidunt varius. Duis euismod diam tellus, eget dictum ante suscipit quis. Nunc sed est ipsum. Nunc luctus augue id sapien blandit fermentum. Aenean eget ipsum lacinia mi eleifend luctus at a arcu.
+					</p>
+
+					<p>
+						Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed a sem dignissim, pulvinar risus sed, maximus mi. Sed non neque et nulla dignissim convallis. In tincidunt pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et, aliquet est. Fusce et ante porta, malesuada felis eget, vulputate elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu. Nullam orci odio, molestie vel suscipit vitae, aliquam at ante. Sed vehicula dapibus elit, eget posuere sem porttitor eget. Fusce aliquam interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum, sed euismod odio. Mauris dictum, velit sit amet dictum imperdiet, enim ex laoreet lorem, ut sodales ex eros nec turpis.
+					</p>
+
+				</details>
+
+				<p>
+					Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed a sem dignissim, pulvinar risus sed, maximus mi. Sed non neque et nulla dignissim convallis. In tincidunt pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et, aliquet est. Fusce et ante porta, malesuada felis eget, vulputate elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu. Nullam orci odio, molestie vel suscipit vitae, aliquam at ante. Sed vehicula dapibus elit, eget posuere sem porttitor eget. Fusce aliquam interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum, sed euismod odio. Mauris dictum, velit sit amet dictum imperdiet, enim ex laoreet lorem, ut sodales ex eros nec turpis.
+				</p> -->
+
+        <h2 class="glitch-on-scroll" id="chapter-1">Art and life(the human need to imitate)</h2>
 
 
-				<div class="layout-block layout-block-9">
 
-					<p>Block 9</p>
+        <p class="indent glitch-on-scroll"> 
+          Performative elements (including dramatic and theatrical) are present
+          in every society, no matter how complex or how unsophisticated the
+          culture may be. These elements are evident in our political campaigns,
+          holiday celebrations, sports events, religious ceremonies, and
+          children’s make-believe, just as they are in dances and rituals of
+          <del>primitive peoples</del>. Nevertheless, most participants in these
+          activities do not consider them to be primarily theatrical, even when
+          spectacle, dialogue, and conflict play large roles. Consequently, it
+          is usual to acknowledge a distinction between theatre (as a form of
+          art and entertainment) and the presence of theatrical or performative
+          elements in other activities…[3]
+        </p>
+        <p>
+          <a href="javascript:void(0)" class="footnote" data-footnote="[3]Oscar Gross Brockett and Franklin Joseph Hildy, History of the Theatre (Pearson, 2008), 1."></a>
+        </p>
+        
+        <p class="glitch-on-scroll">
+          This quote could be a good way of introducing the most common theory
+          of the beginnings of theatre. The theory suggest that theatre might
+          have emerged from beliefs and rituals of early civilizations. These
+          rituals often had a specific purpose, such as bringing good fortune or
+          manifesting certain things within the higher powers. These actions
+          performed and repeated over time would evolve by eventually having
+          special attire designed for it, its own time of happening, or
+          including specific members of a group to be present. These are all
+          parts that we could describe as theatrical elements. That’s how early
+          religious ceremonies might have been formed. They could have included
+          people impersonating fictitious characters or mystical forces.
+          Together with the cultural growth of society, the relation to these
+          rituals might have changed as well, leading to a situation where a
+          certain ritual could have been performed, but detached from its
+          original context and purpose. Here we could talk about the theatre as
+          a form of art.
+        </p>
 
-				</div>
+        <p class="glitch-on-scroll">
+          Another theory, not excluding the one mentioned above, is that sharing
+          and listening to stories, or simply oral tradition, was the base for
+          the growth of theatre. Retelling a certain story of an adventure or
+          confrontation could have been seen as a performance in itself, where
+          the speaker used gestures, expressions and his voice, to imitate
+          different characters present in the story while entertaining the
+          audience with his skills. This could have led to groups of people
+          reenacting certain situations from real life. Already in the fourth
+          century B.C.E., Aristotle in his work Poetics described the act of
+          imitating as a necessary part of human nature. He argues that it is by
+          imitation that we first learn basic skills such as speaking, and that
+          humans in general take pleasure in mimicking and observing others do
+          it.[4]
+        </p>
+        
+        <p>
+          <a href="javascript:void(0)" class="footnote" data-footnote="[4]Ibid, 35."></a>
+        </p>
 
-				<div class="layout-block layout-block-10">
+        <p class="glitch-on-scroll">
+          Erika Fischer-Lichte in her book The Transformative Power of
+          Performance: A New Aesthetics (2008), talks about the fine line
+          between artistic and non-artistic performances, and how can we
+          distinguish between the two.[5] Let’s think for example of a sports
+          event, what differentiates it from being an artistic performance? In
+          both cases, there is a person or a group performing and an audience
+          reacting to what is happening. What seems to be the deciding factor
+          here is the institutional frame of the performance.[6] For exactly that
+          reason, a football game at the Olympics is a sport, but a football
+          game within a museum space is an artistic performance. The same way
+          The Artist is Present (2010) by Marina Abramović, transforms a
+          seemingly normal notion of sitting in front of somebody into an art
+          performance. Abramović, as the title suggest, was indeed present, in
+          MoMA, every day for eight hours, for almost three months.[7] Sitting in
+          silence, facing an identical seat that she was sitting in, inviting
+          the audience members to join her and to spend a minute by looking at
+          each other. What is interesting with this specific example is how the
+          audience’s role is reversed to also taking an active part within the
+          performance, causing a lot of emotional responses in people and the
+          artist herself. It is by this act of translation, within an
+          institution like a museum, that we can view a supposedly normal
+          situation as something else and react to it as a work of art.
+        </p>
 
-					<p>Block 10</p>
+        <p>
+          <a href="javascript:void(0)" class="footnote" data-footnote="[5]Erika Fischer-Lichte, The Transformative Power of Performance (Routledge, 2008), 200."></a>
+        </p>
 
-				</div>
+        <p>
+          <a href="javascript:void(0)" class="footnote" data-footnote="[6]Ibid, 201."></a>
+        </p>
+
+        <p>
+          <a href="javascript:void(0)" class="footnote" data-footnote="[7]“Marina Abramović | MoMA,” The Museum of Modern Art (MoMA, 2016),
+          https://www.moma.org/artists/26439-marina-abramovic."></a>
+        </p>
 
 
-				<div class="layout-block layout-block-11">
+        <p class="glitch-on-scroll">
+          This transformation makes me think of ready-mades, and the presence of
+          everyday in contemporary art. I find the work of the Swiss duo,
+          consisting of Peter Fischli and David Weiss particularly interesting.
+          They would create sculptures by balancing objects from their
+          surroundings on top of each other, produce hours and hours of video
+          material portraying the day-to-day situations, or recreate existing
+          items with polyurethane and paint.[8] Their work consisted of many
+          mediums, but the theme of the quotidian was always there. In 2001 they
+          made a video work called Büsi (Kitty), that for over 6 minutes shows a
+          cat drinking from a plate of milk.[9] The video was originally
+          commissioned to be shown on one of the digital screens at Times
+          Square, next to the screaming advertisements of major corporations.
+          Fischli and Weiss were looking for the beauty within the mundane and
+          found it in the often-overlooked places. Büsi converts the simple
+          scene into something poetic and symbolic by becoming an artwork,
+          putting the everyday on the pedestal. Their work relates to the
+          concept of a ready-made, but it is also a lot different from what
+          Duchamp was doing. They are not presenting an already existing object
+          unaltered, but they carefully reconstruct something known to a viewer
+          by staging and reproducing this experience, posing a question if the
+          art lies in the subject that is being represented or the
+          representation of it.
+        </p>
+        <p>
+          <a href="javascript:void(0)" class="footnote" data-footnote="[8]“The Guggenheim Museums and Foundation,” The Guggenheim Museums and Foundation, n.d., https://www.guggenheim.org/artwork/artist/peter-fischli-and-david-weiss."></a>
+        </p>
 
-					<p>Block 11</p>
+        <p>
+          
+        </p>
+        
+        <figure>
+          
+            <img
+              src="assets/images/busi.jpg"
+              alt="Büsi at Times Square, 2016."
+              width="70%"
+              height="auto"
+              class="center-image"
+            />
+          </figure>
 
-				</div>
+        <p class="glitch-on-scroll">
+          Ben Schwartz in
+          <i>UNLICENSED: Bootlegging as Creative Practice</i> (2023), elaborates
+          on the concept of copying and remaking. He writes about how recreating
+          aesthetics creates something new, as he explores the creative
+          possibilities behind this term by conversing with artists and
+          designers. Schwartz makes a fascinating connection between the act of
+          bootlegging and a method actor.10 What he means by it is that the
+          process of recreating something, in a way forces us to study the
+          original and to understand it from a different perspective. Same way
+          an actor would do, trying to embody somebody else by becoming this
+          person.
+        </p>
+        <p class="indent glitch-on-scroll">
+          “…in the case of the artist Robert Gober who, upon first seeing an
+          Ellsworth Kelly painting, was utterly confused. “I couldn’t figure out
+          whether it was a joke or it was really smart, but it was way beyond
+          me, like a language I didn’t know how to read. I remember I went home
+          and in the basement of our house I remade the painting to try to
+          understand it.” The bootleg as a method actor is a form of research, a
+          way to better understand an original. It embraces copying as a process
+          and acknowledges that creation “demands long intense engagement with
+          what has been in order to move on.11
+        </p>
+
+        <p class="glitch-on-scroll">
+          Artists have always been fascinated with translating the everyday into
+          art and imitating elements of their surroundings, as this act has the
+          ability to offer new perspectives on a subject, evoke emotions and
+          create space for reflection. In the next chapter, I will examine the
+          relationship between an artist's identity and their art practice by
+          exploring different examples.
+        </p>
+
+        <!-- <figure>
+          <a href="content/painting-forest-lake.jpg" target="_blank">
+            <img
+              src="content/painting-forest-lake.jpg"
+              alt="A painted representation of a forest with a big blue lake"
+              width="100%"
+              height="auto"
+            />
+          </a>
+
+          <figcaption>
+            <p>
+              <em
+                ><a
+                  href="https://www.youtube.com/watch?v=bkKTSw4pL2A"
+                  target="_blank"
+                  >Painting of a forest with a blue lake</a
+                >, by Anonymous</em
+              >
+            </p>
+          </figcaption>
+        </figure>
+
+        <p>
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia curae; Sed a sem dignissim, pulvinar risus sed,
+          maximus mi. Sed non neque et nulla dignissim convallis. In tincidunt
+          pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et,
+          aliquet est. Fusce et ante porta, malesuada felis eget, vulputate
+          elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu.
+          Nullam orci odio, molestie vel suscipit vitae, aliquam at ante. Sed
+          vehicula dapibus elit, eget posuere sem porttitor eget. Fusce aliquam
+          interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum,
+          sed euismod odio. Mauris dictum, velit sit amet dictum imperdiet, enim
+          ex laoreet lorem, ut sodales ex eros nec turpis.
+        </p> -->
+
+        <h2 class="glitch-on-scroll" id="chapter-2">
+          Art and the artist
+        </h2>
+
+        <p class="glitch-on-scroll">
+          I would like to start this chapter by bringing up a story I heard in a lecture of Matt Olson from 2017, which took place at the Southern California Institute of Architecture (SCI-Arc). Olson founded OOIEE (Office Of Interior Establishing Exterior) in 2016 as a way to lead his interdisciplinary practices, ranging from furniture and objects to actions and scenarios, landscape architecture-related work, teaching, writing, publishing, fashion, and more.12 He defines his approach as "open practice." These are the two slides from the presentation that provide some insight into his philosophy.
+        </p>
+
+        <p class="indent glitch-on-scroll">
+
+          Everything Is always changing all the time. So whatever I say here is temporary. It’s just now.<br>
+When I forget this I get mixed up and think I actually believe things. I believe my beliefs? Like it’s solid. But it’s not.<br>
+I want to stay out of my own way and not take myself too seriously.13 <br><br><br>
+I don’t identify as a designer or an artist… not in a fussy or difficult way.<br>
+I like to say I work on projects related to contemporary art and design.14
+        </p>
+
+        <p class="glitch-on-scroll">
+          At a later point in the lecture, he tells a story that happened in 2016, where a Korean gallerist of the famous artist Lee Ufan was arrested after someone discovered he had been selling forged artworks of his and making great profit. The gallerist had even confessed that the works were, in fact, replicas. At the final stage of the police investigation, the artist himself was called in to examine the authenticity of the artworks. He apparently showed up with two books about his work and a magnifying glass. The inspection lasted two days, after which he stated that these were, in fact, his paintings, disagreeing with the previous confessions of the gallerist and the forensic experts.15
+        </p>
+
+        <p class="glitch-on-scroll">
+          What does it mean that Lee Ufan can see his “breath” as he says16, in works not created by him? Does that mean that the artist can be detached from their art? Maybe it could be that he sees his art practice more through a spiritual lens, rather than an egotistical one, focusing on the materials he is working with and carefully listening to them, making himself as a person less important to the process and being in service to something greater. Therefore, maybe that’s why he could see these qualities in a work made by a different set of hands and consider it his, or an original. Maybe the way of looking at art exclusively in terms of money and authorship is just a limiting approach…
+        </p>
+
+        <p class="glitch-on-scroll">
+          Ryan Gander, during an artist talk in 2021, as part of a master class organized by the Zabludowicz Collection in London, talks about the “need” for a coherent practice as a professional artist, the idea of a solo show as a group show where he exhibits works as six fictional artists at the same time, as well as how the art market dictates what kind of art is being made.
+        </p>
+
+        <p class="indent glitch-on-scroll">
+          The problem is that the art market is based on repetition. So, that’s why it’s kind of bizarre that, like… you know, my dad, he was an engineer at Vauxhalls, and when you work inside a factory and you see the mechanics of the factory and the repetition of that kind of process, you, I guess, long for difference, diversity, and unpredictability. Which is essentially freedom and agency, because if you’re in a repetitive situation, your agency is reduced, isn’t it? Because you’re doing the same thing. Art is based on that purely for financial reasons, because I guess there are a lot of art collectors who don’t think: I’d like a work by that artist and ask the artist what they should get—they just want one that looks like that, because they’ve seen it at their friend’s house, and it was on the cover of Flash Art, and the whole economy of art is based on repetition. But it’s weird that, you know, my dad, as I said, worked in a repetitive environment, and he always said that… and I can’t say what the artist’s name is, but you could pick any artist that comes into your head, actually, and he said, why do they always do the same thing? If I was an artist, I’d like to do something different every day because… I mean, even Joseph Beuys said art is the science of freedom. I mean, it’s based, you know. I find that kind of strange.17
+        </p>
+
+        <p class="glitch-on-scroll">
+          Gander points out how many constraints the art market can cast upon the artist. His way of resistance against some of it was to invent new alter egos. He would embody six fictional artists, creating work as them, resulting in this idea of a group/solo show, enabling him to explore new aesthetics without being limited to a certain style. Another project from Ryan Gander worth mentioning is a series of works titled Phantom Ambition, where the artist presents posters for an exhibition that never happened, but in his mind, it should have. He picks a selection of names, a location, and a date, as he takes on the role of a speculative graphic designer, making the audience imagine some of these bizarre combinations by reshuffling elements of the real world as typography in the poster...18
+        </p>
+
+        <p class="glitch-on-scroll">
+          Talking about working with words and language that surrounds our daily lives, I can’t help but think of Nora Turato and her practice. I would describe this Amsterdam-based artist as an observer and listener, in the first place. She works with words that she finds in everyday conversations, on labels of products, or on her phone and being online. She describes it as a process that comes to her naturally, something that just happens and can’t really be forced. The difference between her and most people is that she actually stops for a second to write down the parts she finds interesting, leaving her with a lot of material to work with. Originally, she was trained as a graphic designer and worked as one before developing her art practice, which provided her with a more than necessary skill set. The found sentences are translated into art performances, as well as typographical posters or murals.19 In Revue Faire #49 (2025), a critical graphic design journal, Turato gave a short interview talking about her work, graphic design, and the relation between art and life:
+        </p>
+
+        <p class="indent glitch-on-scroll">
+          I don't see much difference between a constellation of wall paintings and a constellation of posters versus a book or a speech. It's all equal… There's no hierarchy… My relationship to graphic design is really changing now. The typography of the works I am presenting now in Zurich (the next big thing is YOU, 8 June-20 July 2024, Galerie Gregor Staiger) is not kerned, I didn't adjust the leading; I just kind of typed them in. I am letting go of graphic design a little bit. But I do believe it's a layer you use on top of the text. I guess the reason for the existence of graphic design is to manipulate, or change something somehow, and it is a very powerful tool. So, when I use a certain typeface and borrow something from the advertising world in an art context, your perspective is shifted towards it, and you create an awareness of it. Graphic design is everywhere, and it says something about our society. And art is about our society, so I think it is interesting to use graphic design. But currently we seem to be experiencing a flattening, and a saturation of images which makes me want to let go of graphics... You could watch your environment and see something about yourself. Nothing in nature seems to only go in one direction. I find it always fascinating when certain words are cropping up in culture; suddenly everything is toxic, or safe, for example. I believe you can learn a lot about the public psyche through language and graphic design. Or by looking at advertising and typography in public space, you can quickly see where we are at. On the other hand, for me art is something that shifts my perspective towards reality. But reality is not a defined thing, it changes according to how you perceive it. If you focus on something, you see it reflected in reality. So, if I see art I really like, it shifts my perspective towards reality. If you can, for lack of a better phrase, raise awareness about the occult practices of big advertising agencies through your art, you are doing something interesting, because it feeds into reality itself.20
+        </p>
+
+        <p class="glitch-on-scroll">
+          In conclusion, this chapter explores how contemporary artists approach the relationship between art and identity. Matt Olson rejects rigid labels through his 'open practice' philosophy. Lee Ufan’s ability to see his 'breath' in forgeries challenges the idea of authorship. Ryan Gander uses fictional alter egos to break free from repetition and discover new possibilities. Nora Turato works with everyday language to reflect on modern culture and question the role of graphic design in society. Together, these artists show that both art and identity are fluid, ever-changing, and influenced by broader cultural and capitalist forces. Does that mean we are just pretending to be someone? Playing a role of somebody we believe we are supposed to be?
+        </p>
+
+        <h2 class="glitch-on-scroll" id="chapter-3">
+          Performance of self and reality TV
+        </h2>
+      <p class="indent glitch-on-scroll">
+
+        The truths one holds about oneself exist entirely isolated from the world external to them. The only way these truths are made external is through the performance of what one believes to be true or wishes to project as the truth to an external audience in the same way an actor on stage would, blending truth with fiction… However, crafting a self is not as simple as “I want to be, so I am.” The performance is restricted by the established cultural perception of who one is allowed to be, given how they identify and are identified. Proximity to power allows one greater power in manipulating their personal truth… The surveillance of the performance of self and perpetuation of specific cultural norms and values (fictions) influences one’s self-concept to the point that one can never escape the performance.21
+      </p>
+      
+      <p class="glitch-on-scroll">
+        Kamau Nganga in his graduation research paper PEOPLE WATCHING: The performance of the self and its cultural preordination (2024) talks about how the performance of one’s identity is shaped by external factors and how being in position of power allows bigger freedom of expression. If that is true, should we view our identities as unauthentic constructs?
+      </p>
+
+      <p class="glitch-on-scroll">
+        Ervin Goffman shares his perspective on performativity within daily interactions in his book titled The Presentation of Self in Everyday Life (1956)22. He claims that within any social group structure there are assumed roles being played out by the members of the group, and we as humans somehow aim to maintain our position within these groups by presenting ourselves accordingly. He presents an idea of a frontstage and a backstage, frontstage being a public setting that we put on an adequate mask for, and backstage being more of a private setting where we can reveal a more real version of ourselves. However, he does not see this as something negative. Instead, he argues that this is the way for us humans to navigate through social life. This lets us see reality as a set of common beliefs.
+      </p>
+
+      <p class="glitch-on-scroll">
+        Guy Debord, in Society of the Spectacle (1967) argues that we live in a society obsessed with images and keeping up with appearances driven by capitalism, leading to a situation where experiences become replaced by symbols and imagery.
+      </p>
+
+      <p class="indent glitch-on-scroll">
+        In societies where modern conditions of productions prevail, all of life presents itself as an immense accumulation of spectacles. Everything that was directly lived has moved away into a representation.23
+      </p>
+
+      <p class="glitch-on-scroll">
+        Even though, a lot of time has passed since Ervin Goffman and Guy Debord shared their philosophies with the world, I still consider them to be relevant. Especially in the modern world where social media and image play such a crucial role within society.
+      </p>
+
+      <p class="glitch-on-scroll">
+        I find the concept of reality TV very intriguing in how it blurs the line between the real and seemingly real. The idea behind it being, to create a television programme, continuously filmed in actual environments, with existent people, providing a “real” look into somebody else’s life. What people often don’t realize is that these programmes are also directed and edited, providing the audience with just a hyper-realistic look-a-like in the end.24 Susan Sontag in her book On Photography (1977), argues how no image can actually show reality, simply pointing to the fact, how subjective and constructed the image is. Deciding about what to put in the frame already creates a narrative. Neutrality simply does not exist, even if the decision-making process is rather unconscious.
+      </p>
+
+      <p class="indent glitch-on-scroll">
+        Instead, reality has come to seem more and more like what we are shown by cameras. It is common now for people to insist about their experience of a violent event in which they were caught up—a plane crash, a shoot-out, a terrorist bombing—that “it seemed like a movie.” This is said, other descriptions seeming insufficient, in order to explain how real it was.25
+
+      </p>
+
+      <p class="glitch-on-scroll">
+        We, as both the audience and actors, can see how this mirroring between life that we experience and life we see on screens influences each other. But let’s not forget that the mirror works both ways, imitation of life presented in film also shapes the perception of lived experiences and creates certain visions and expectations, resulting in a never-ending loop.
+      </p>
+
+      <p class="glitch-on-scroll">
+        There are examples of filmmakers that are aware of it and find the relation of real and simulated inspiring. Projects about this phenomenon usually result in what we can call meta cinema, something that is deepening the reflection within the mirror. This kind of films actually reveal in some ways that the displayed - on screen - reality is just an illusion. At the end of The Holy Mountain (1973)26 by Alejandro Jodorowsky, he reveals himself to the actors as the director as well as addresses the audience of the film, breaking the 4th wall, destroying the illusion of an independent world existing within a movie structure. The camera zooms out, and we can suddenly see a film crew and filming equipment around the actors.
+      </p>
+      <figure>
+          
+        <img
+          src="assets/images/hm1.jpg"
+          alt="Ending scene of The Holy Mountain."
+          width="70%"
+          height="auto"
+          class="center-image"
+        />
+        <img
+        src="assets/images/hm2.jpg"
+        alt="Ending scene of The Holy Mountain."
+        width="70%"
+        height="auto"
+        class="center-image"
+      />
+      </figure>
+
+      <p class="glitch-on-scroll">
+        But let’s try to look into the mirror even deeper. In 2022 Nathan Fielder created something I would call a meta reality TV show for HBO, titled The Rehearsal, where he invites real people to prepare for real life situations by rehearsing them. It includes recreating actual spaces as movie sets and hiring actors to study personalities of people in order to reenact them within certain environments. What he does not predict is that even when everything is scripted, and planned out, the participants cannot carry out the rehearsal in the real world as well as they were prepared to. Something strange happens. The participant being aware of the camera, instead of acting freely, starts portraying a version of themself, but as a TV character. Similar thing happens in regular reality TV shows. The idea of being recorded suddenly becomes a stress factor and creates a need for the person to be seen a certain way. The presence of the Big Brother27 influences and surveils the performance of self, just like it happens within social life. Similarly to the way content posted on social media platforms like Instagram, is often just a reproduction of already existing images and certain aesthetics, that shape our interpretation of the world.28
+      </p>
+
+      <p class="glitch-on-scroll">
+        Graphic designers are trained to create images, aesthetics and to convey certain messages as part of their job, which raises a question, how much influence does graphic design have over the mass-perception of reality?
+      </p>
+
+      <h2 class="glitch-on-scroll" id="chapter-4">
+        Graphic design as an actor
+      </h2>
+
+      <p class="glitch-on-scroll">
+        Ruben Pater wrote two significant books analyzing the position of graphic design and the graphic designer in today’s world. The books being The Politics of Design (2016)29 and CAPSLOCK (2021).30 Pater by giving examples, demonstrates how all design is inherently political, saying that it “cannot be disconnected from values and assumptions in which it was created”31, consequently stating that no means of communication can be neutral.
+      </p>
+
+      <p class="glitch-on-scroll">
+        The Politics of Design, besides being a book, also became an online blog where different examples of design analysis are archived. I found an article there titled How Designers Make You Addicted to Social Media (2016), written by Tristan Harris, a former design ethicist at Google. He talks about how interface designers use design to guide our online behaviors, get our attention or to even make us reliant. He goes over things like the illusion of choice in menus or comparing the apps notification systems to a slot machine, making us feel excited or sad when we “play it” or in other words, check our phones.32
+      </p>
+
+      <p class="glitch-on-scroll">
+        In 2016 Metahaven, an Amsterdam based collective working between research, design and art, gave a lecture at The European Graduate School (EGS) in Saas-Fee, Switzerland talking about propaganda, as well as one of their latest projects at the time titled The Sprawl (2016). The project took form of a multi-channel video installation, website, feature-length film and a YouTube channel.33 Daniel van der Velden, one of the founders of the collective, says it is about “The way we perceive narratives and how they become more than just propaganda. So instead of being in a position where we would be outside of it, we tried to be one with it.”34 It argues that in the times of the abundance of information found on the internet, and the ever-presence of interfaces (like mentioned above), we are all subjects of a new form of propaganda. In 2017 the collective gave another lecture about this topic, this time in Amsterdam, as part of the SONIC ACTS FESTIVAL titled Recent Hystory (The Sprawl Continues). In the lecture they explore the possible future edit for The Sprawl. However, I found the short Q&A segment after the lecture to be most thought provoking. Vinca Kruk, who is the other half of Metahaven, is answering the question that goes along the lines of “if the internet has become a disruptive geo-political force… can you say how you see that at the moment, and is it a lost cause?”. At first she admits that she does see it as a lost cause, but then she adds that she sees hope too. She brings up the example of a young girl shown earlier in the lecture, performing a guitar acoustic cover of the song Nyash Mash originally compiled by a Russian YouTube creator Enjoykin, who reassembled clips of Natalia Poklonskaya’s speech connected to the annexation of Crimea by Russia, turning it into a viral “cute-sounding” song. Vinca Kruk, acknowleding the layers of translation of the original video, says that she can see the beauty and the poetic in it too. Even though it is propaganda, she tries to notice the human factor in it, she tries to notice the teenager behind the guitar singing beautifully. Daniel van der Velden disagrees by commenting“…we are forgetting the content we are dealing with because of the texture, because of the way in which propaganda is not about seemingly political things.”35 At this point, the conversation ends, as the time for questions and answers has run out, but I believe these two opinions do not necessarily have to exclude one another…
+      </p>
+      <figure>
+          
+        <img
+          src="assets/images/thesprawl.jpg"
+          alt="Image from Metahaven’s lecture, Recent Hystory (The Sprawl Continues)."
+          width="80%"
+          height="auto"
+          class="center-image"
+        />
+        </figure>
+
+      <h3 class="glitch-on-scroll" id="epilogue">
+        Epilogue
+      </h3>
+
+      <p class="glitch-on-scroll">
+        The texture, or the aestheticized layer placed on top of information, which we can call graphic design, is ultimately an actor, always signifying something through its performance. We have to realize that not only individuals play roles in the theatre of life, but design too, gaining its own life, it participates in this performance, as it is fundamentally intertwined with the functioning of society. We must remain aware of this, as the layers of information, we encounter daily have the power to shape our perceptions, or even impact global geopolitics.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+        <h2 class="glitch-on-scroll" id="bibliography">Bibliography</h2>
+        <span style="font-size: x-small;">
+        <p>Art Basel. “Meet the Artists | Nora Turato.” YouTube, November 1, 2021. https://www.youtube.com/watch?v=yGeJ6dnDtSw.</p>
+        <p>Brockett, Oscar Gross, and Franklin Joseph Hildy. History of the Theatre. Pearson, 2008.</p>
+
+        <p>
+Cambridge Dictionary. “Big Brother.” @CambridgeWords, January 18, 2023. https://dictionary.cambridge.org/dictionary/english/big-brother.
+        </p>
+
+        <p>
+          Debord, Guy. Society of the Spectacle. Detroit: Black & Red, 1977.
+        </p>
+
+        <p>
+          European Graduate School Video Lectures. “Metahaven. Propaganda. 2016.” YouTube, December 17, 2016. https://www.youtube.com/watch?v=4jSLZIiu9Eo.
+        </p>
+
+        <p>
+          Fischer-Lichte, Erika. The Transformative Power of Performance. Routledge, 2008. 
+        </p>
+
+        <p>
+          Gillies, John. “Globe/Theatrum Mundi.” Cambridge University Press EBooks, August 17, 2019, 60–66. https://doi.org/10.1017/9781316137062.009.
+        </p>
+
+        <p>
+          Goffman, Ervin. The Presentation of Self in Everyday Life. Harmondsworth ; Penguin Books, 1978.
+        </p>
+
+        <p>
+          Harris, Tristan. “How Technology Is Hijacking Your Mind — from a Magician and Google Design Ethicist.” Medium. Thrive Global, May 18, 2016. https://medium.com/thrive-global/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3#.qsgtv1l6b..
+        </p>
+
+        <p>
+        Kaplan, Isaac. “A Forger Confessed to Faking Millions in Lee Ufan Works—Now the Artist Says They’re Real.” Artsy, July 6, 2016. https://www.artsy.net/article/artsy-editorial-a-forger-confessed-to-faking-millions-in-lee-ufan-works-now-the-artist-says-they-re-real.
+      </p>
+
+      <p>
+        Kritis, Joris . Revue Faire N°49 — Lawrence Weiner: We Are Ships at Sea, Not Ducks on a Pond. Author: Joris Kritis with Interviews with Nora Turato & Linda van Deursen. Editions Empire, 2025.
+      </p>
+
+      <p>
+        Muraben, Billie . “Making Propaganda about Propaganda: Metahaven’s New Film Considers Fantasy and Truth in Internet Culture.” www.itsnicethat.com, February 11, 2016. https://www.itsnicethat.com/features/metahaven-thesprawl-110216.
+      </p>
+
+      <p>
+        Nganga, Kamau. “PEOPLE WATCHING: The Performance of Self and Its Cultural Preordination,” 2024.
+      </p>
+
+      <p>
+        Pater, Ruben. Caps Lock. Valiz, 2021.
+      </p>
+
+      <p>
+        Politics of Design : A (Not So) Global Manual for Visual Communication. Amsterdam: Bis Publishers, 2016.
+      </p>
+
+      <p>
+        Ryanganderarchive.com. “Access — the Work of Ryan Gander - an Archive,” 2025. https://ryanganderarchive.com/works/phantom-ambition.
+      </p>
+
+      <p>
+        Schwartz, Ben. Unlicensed. Valiz, Source Type, 2024.
+      </p>
+
+      <p>
+        SCI-Arc Media Archive. “Matt Olson (February 1, 2017).” YouTube, September 10, 2017. https://www.youtube.com/watch?v=GFYZOx7c7ag.
+      </p>
+
+      <p>
+        Sciarc.edu. “Matt Olson - SCI-Arc,” 2017. https://www.sciarc.edu/events/lectures/mat-olson.
+      </p>
+
+      <p>
+        Sonic Acts. “Metahaven - Recent Hystory (the Sprawl Continues).” YouTube, June 14, 2017. https://www.youtube.com/watch?v=wyGcPCmvG0w.
+      </p>
+
+      <p>
+        Sontag, Susan. On Photography. London: Allen Lane, 1977.
+      </p>
+
+      <p>
+        The Guggenheim Museums and Foundation. “The Guggenheim Museums and Foundation,” n.d. https://www.guggenheim.org/artwork/artist/peter-fischli-and-david-weiss.
+      </p>
+
+      <p>
+        The Holy Mountain. ABKCO Records, 1973.
+      </p>
+
+      <p>
+        The Museum of Fine Arts, Houston. “Peter Fischli and David Weiss: Büsi (Kitty) (February 26–April 28, 2019),” 2019. https://www.mfah.org/exhibitions/peter-fischli-and-david-weiss-busi-kitty.
+      </p>
+
+      <p>
+        The Museum of Modern Art. “Marina Abramović | MoMA.” MoMA, 2016. https://www.moma.org/artists/26439-marina-abramovic.
+      </p>
+
+      <p>
+        Thomas Flight. “How Real Is the Rehearsal?” YouTube, September 13, 2022. https://www.youtube.com/watch?v=pQRKDBpZ_5g.
+      </p>
+
+      <p>
+        Two or Three Things I Know about Her. UGC, 1967.
+      </p>
+
+      <p>
+        Zabludowicz Collection. “Master Class 2021 - Ryan Gander Artist Talk.” YouTube, July 25, 2022. https://www.youtube.com/watch?v=NSJ_m419-5M.
+      </p>
+      <br>
+      <br>
+      
+      
+      
+      
+
+        </span>
+
+      
+        <footer>
+         
+         
+        
+        
+        </main>
+     
+      </footer>
+      <button id="refresh-button" title="Refresh the website">🔄</button>
 
 
-				<div class="layout-block layout-block-12">
-
-					<p>Block 12</p>
-					
-				</div>
-
-			</main>
-
-		</div>
-
-		<!-- end webpage content -->
-
-	</body>
-
-</html>
+      <div id="footnote-popup" class="footnote-popup" style="display: none; position: fixed; background: #f0f0f0; border: 2px solid #000; padding: 1rem; width: 200px; z-index: 10000; color: #000;">
+        <div class="footnote-content"></div>
+        <button class="close-footnote">Close</button>
+      </div>
+      
+        <!-- end webpage content -->
+        </body>
+        </html>
